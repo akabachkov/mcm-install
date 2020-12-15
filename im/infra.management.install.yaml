@@ -1,0 +1,19 @@
+apiVersion: infra.management.ibm.com/v1alpha1
+kind: IMInstall
+metadata:
+  labels:
+    app.kubernetes.io/instance: ibm-infra-management-install-operator
+    app.kubernetes.io/managed-by: ibm-infra-management-install-operator
+    app.kubernetes.io/name: ibm-infra-management-install-operator
+  name: im-iminstall
+  namespace: management-infrastructure-management
+spec:
+  applicationDomain: inframgmt.apps.mcm.ibmcc.ru
+  imagePullSecret: cp.icr.io
+  httpdAuthenticationType: openid-connect
+  httpdAuthConfig: imconnectionsecret
+  enableSSO: true
+  initialAdminGroupName: users
+  license:
+    accept: true
+  orchestratorInitialDelay: '2400'

@@ -1,0 +1,11 @@
+apiVersion: infra.management.ibm.com/v1alpha1
+kind: Connection
+metadata:
+  annotations:
+    BypassAuth: "true"
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: imconnection
+  namespace: "management-infrastructure-management"
+spec:
+  cfHost: web-service.management-infrastructure-management.svc.cluster.local:3000
