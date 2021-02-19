@@ -2,10 +2,10 @@ apiVersion: orchestrator.management.ibm.com/v1alpha1
 kind: Installation
 metadata:
   name: ibm-management
-  namespace: $CP4MCM_NAMESPACE
+  namespace: cp4mcm
 spec:
-  storageClass: $CP4MCM_BLOCK_STORAGECLASS
-  imagePullSecret: $ENTITLED_REGISTRY_SECRET
+  storageClass: nfs-storage-provisioner
+  imagePullSecret: ibm-management-pull-secret
   license:
     accept: true
   mcmCoreDisabled: false

@@ -13,7 +13,7 @@ spec:
   httpdAuthenticationType: openid-connect
   httpdAuthConfig: imconnectionsecret
   enableSSO: true
-  initialAdminGroupName: users
+  initialAdminGroupName: cpusers
   license:
     accept: true
   orchestratorInitialDelay: '2400'
